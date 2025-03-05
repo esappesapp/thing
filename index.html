@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
-		<title>$GODOT_PROJECT_NAME</title>
+		<title>website</title>
 		<style>
 			html, body {
 				margin: 0;
@@ -33,7 +33,7 @@
 				right: 0;
 				top: 0;
 				bottom: 0;
-				background-color: $GODOT_SPLASH_COLOR;
+				background-color: index.png_COLOR;
 				display: flex;
 				flex-direction: column;
 				justify-content: center;
@@ -41,7 +41,7 @@
 				visibility: hidden;
 			}
 		</style>
-		$GODOT_HEAD_INCLUDE
+		
 	</head>
 	<body>
 		<!-- Wrap everything in a left container -->
@@ -55,16 +55,16 @@
 			</noscript>
 
 			<div id="status">
-				<img id="status-splash" class="$GODOT_SPLASH_CLASSES" src="$GODOT_SPLASH" alt="">
+				<img id="status-splash" class="index.png_CLASSES" src="index.png" alt="">
 				<progress id="status-progress"></progress>
 				<div id="status-notice"></div>
 			</div>
 		</div>
 
-		<script src="$GODOT_URL"></script>
+		<script src="index.js"></script>
 		<script>
-			const GODOT_CONFIG = $GODOT_CONFIG;
-			const GODOT_THREADS_ENABLED = $GODOT_THREADS_ENABLED;
+			const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":false,"fileSizes":{"index.pck":96787376,"index.wasm":43016933},"focusCanvas":true,"gdextensionLibs":[]};
+			const GODOT_THREADS_ENABLED = false;
 
 			// Select the canvas element
 			const canvasElement = document.querySelector("#canvas");
