@@ -12,15 +12,13 @@
 				overflow: hidden;
 			}
 
-			#container {
-				display: flex;
-				height: 100%;
-			}
-
-			#canvas-container {
+			/* Constrain everything to the left half of the screen */
+			#left-container {
 				width: 50%; /* Half the viewport width */
 				height: 100%;
-				background-color: black; /* Optional: Background for the canvas area */
+				background-color: black; /* Optional: Background for the left side */
+				position: relative;
+				overflow: hidden;
 			}
 
 			#canvas {
@@ -46,22 +44,21 @@
 		
 	</head>
 	<body>
-		<div id="container">
-			<div id="canvas-container">
-				<canvas id="canvas">
-					Your browser does not support the canvas tag.
-				</canvas>
+		<!-- Wrap everything in a left container -->
+		<div id="left-container">
+			<canvas id="canvas">
+				Your browser does not support the canvas tag.
+			</canvas>
+
+			<noscript>
+				Your browser does not support JavaScript.
+			</noscript>
+
+			<div id="status">
+				<img id="status-splash" class="index.png_CLASSES" src="index.png" alt="">
+				<progress id="status-progress"></progress>
+				<div id="status-notice"></div>
 			</div>
-		</div>
-
-		<noscript>
-			Your browser does not support JavaScript.
-		</noscript>
-
-		<div id="status">
-			<img id="status-splash" class="index.png_CLASSES" src="index.png" alt="">
-			<progress id="status-progress"></progress>
-			<div id="status-notice"></div>
 		</div>
 
 		<script src="index.js"></script>
