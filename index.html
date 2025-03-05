@@ -123,11 +123,17 @@
 					console.log.apply(console, Array.from(arguments));
 					// eslint-disable-line no-console
 
-					// Check if the printed message contains "Collided with: yellow"
+					// Check the printed message for color collisions
 					const message = Array.from(arguments).join(' ');
 					if (message.includes("Collided with: yellow")) {
-						// Change the background to tree.html
-						document.getElementById('iframe-background').src = "portfolio/index.html";
+						// Change the background to yellow/index.html
+						document.getElementById('iframe-background').src = "yellow/index.html";
+					} else if (message.includes("Collided with: blue")) {
+						// Change the background to blue/index.html
+						document.getElementById('iframe-background').src = "blue/index.html";
+					} else if (message.includes("Collided with: purple")) {
+						// Change the background to purple/index.html
+						document.getElementById('iframe-background').src = "purple/index.html";
 					}
 				}
 			};
